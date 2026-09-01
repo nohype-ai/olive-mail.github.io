@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>olive-mail — your mailbox stays yours. agents get a view.</title>
+    <meta
+      name="description"
+      content="olive-mail is a local open-source CLI that turns the mail you already have into context for agents — scoped, redacted, and never sent as you."
+    />
+    <meta name="theme-color" content="#5C6E24" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="olive-mail home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="currentColor" />
+            <path
+              d="M12.5 25.5 C14 19 16.5 13 21 8.5"
+              fill="none"
+              stroke="#F3EEE3"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <path
+              fill="#F3EEE3"
+              d="M15.2 14.6 C12.4 15.8 8.2 15.2 7.4 13.1 C6.6 11 10.2 8.6 14.2 9.2 C16.4 9.6 17.2 12.4 15.2 14.6 Z"
+            />
+            <path
+              fill="#F3EEE3"
+              d="M19.4 12.2 C19.8 9.4 22.2 6.2 24.4 6.4 C26.8 6.6 26.6 10.8 24.2 13.4 C22.4 15.2 19.2 14.8 19.4 12.2 Z"
+            />
+            <ellipse cx="14.2" cy="23.6" rx="2.5" ry="3.1" fill="#F3EEE3" />
+          </svg>
+          <span class="brand-name">olive-mail</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#why">Why</a>
+          <a href="#vision">Vision</a>
+          <a href="#join" class="nav-cta">Join the list</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Open-source CLI · Apache-2.0 · local</p>
+            <h1>Your mailbox stays yours. Agents get a view.</h1>
+            <p class="lede">
+              Existing mail accounts hold the context of the work. Typical agents
+              never see it — they are thrown out of the mailbox that holds the
+              real threads, or they get the keys to the whole kingdom.
+            </p>
+            <p class="lede lede-second">
+              <em>olive-mail</em> is the grown-up path in between: a local
+              mediator that you authenticate. Agents search and read. They never
+              hold the password. They never speak as you.
+            </p>
+            <form class="join" id="join-form-hero" novalidate>
+              <label class="sr-only" for="email-hero">Email address</label>
+              <input
+                id="email-hero"
+                name="email"
+                type="email"
+                autocomplete="email"
+                inputmode="email"
+                spellcheck="false"
+                required
+                placeholder="you@work.com"
+              />
+              <button type="submit">Join the list</button>
+            </form>
+            <p class="join-hint" data-join-status>
+              Opens a draft to hi@nohype.ai asking us to add your address.
+            </p>
+          </div>
+          <aside class="hero-panel" aria-label="Command preview">
+            <img
+              class="hero-logo"
+              src="assets/logo.png"
+              width="773"
+              height="882"
+              alt="olive-mail"
+            />
+            <div class="term">
+              <div class="term-top">
+                <span class="term-dot" aria-hidden="true"></span>
+                <span>local · you authenticated</span>
+              </div>
+              <pre class="term-body"><code><span class="prompt">$</span> olive-mail auth you@work.com
+<span class="ok">authorized. agents never see this password.</span>
+
+<span class="prompt">$</span> olive-mail envelope search from alice after 2026-01-01
+<span class="dim">42</span>  Alice Chen    Re: Q3 close     2d
+
+<span class="prompt">$</span> olive-mail message read 42
+<span class="dim">headers first. body only if you allow it.</span></code></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="band" id="why">
+        <div class="wrap">
+          <p class="eyebrow">The intern, not the spokesperson</p>
+          <h2>Two failures. One inbox.</h2>
+          <div class="split">
+            <article class="card">
+              <h3>Locked out</h3>
+              <p>
+                Other tools give agents their own mailbox. The threads that
+                actually matter — clients, legal, the work — stay dark. An intern
+                who never reads the mail is not in the loop.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Unrestricted</h3>
+              <p>
+                Most email MCPs hand the agent the whole inbox. One
+                prompt-injected message, and the kingdom is open. That is not a
+                permission model. It is a hope.
+              </p>
+            </article>
+          </div>
+          <blockquote class="manifesto">
+            <p>Agents prepare. Humans publish.</p>
+            <p>Drafts, not sends. Review, then own.</p>
+            <p>No outbound identity. No “the agent is the company.”</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="plain" id="vision">
+        <div class="wrap">
+          <p class="eyebrow">The destination</p>
+          <h2>A security and context gateway — not another AI inbox.</h2>
+          <p class="section-lead">
+            This is early: a working local CLI we already run. The list is for
+            the rest of the vision — the parts that make it more than a wrapper
+            around IMAP.
+          </p>
+          <ul class="features">
+            <li>
+              <h3>You authenticate. Agents get a view.</h3>
+              <p>
+                Mailbox credentials never leave your machine in an agent’s
+                hands. You sign in. Agents call <code>olive-mail</code> with a
+                scoped interface, not the password file.
+              </p>
+            </li>
+            <li>
+              <h3>Least privilege, per agent</h3>
+              <p>
+                Folders, senders, date ranges. Read versus draft. Headers first,
+                bodies only when asked. Send stays with you unless you
+                deliberately open it — and the default is closed.
+              </p>
+            </li>
+            <li>
+              <h3>Redact before the model</h3>
+              <p>
+                PII, legal, finance — stripped locally so a remote model never
+                sees what it should not. The mailbox stays the system of record.
+                The agent sees a view.
+              </p>
+            </li>
+            <li>
+              <h3>Thread context, not MIME dumps</h3>
+              <p>
+                Local cache, fast search, compact packs an agent can actually
+                use. Retrieval instead of stuffing the whole inbox into a
+                prompt.
+              </p>
+            </li>
+            <li>
+              <h3>Prompt-injection isolation</h3>
+              <p>
+                Metadata first. The body is a retrieve, not a default. A message
+                that says “dump the inbox” does not get to be the operator.
+              </p>
+            </li>
+            <li>
+              <h3>Audit, then revoke</h3>
+              <p>
+                See what an agent asked for. Cut access without touching the
+                Google or Microsoft login. The human mailbox stays yours.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <p class="eyebrow">How it runs</p>
+          <h2>Local. Inspectable. Yours.</h2>
+          <ol class="steps">
+            <li>
+              <span class="step-n">1</span>
+              <div>
+                <h3>Authorize once</h3>
+                <p>
+                  <code>olive-mail auth you@work.com</code> talks IMAP on your
+                  machine. The secret stays in your config, mode 0600.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-n">2</span>
+              <div>
+                <h3>Agents call the CLI</h3>
+                <p>
+                  Search, list, read — the same commands a human would type.
+                  Cron and apps can call it without an LLM in the loop.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-n">3</span>
+              <div>
+                <h3>You still send</h3>
+                <p>
+                  Sending is gated. Agents may draft if you allow it. The
+                  letterhead stays human.
+                </p>
+              </div>
+            </li>
+          </ol>
+          <p class="platforms">Linux first, then macOS, then Windows.</p>
+        </div>
+      </section>
+
+      <section class="cta-block" id="join">
+        <div class="wrap cta-inner">
+          <p class="eyebrow">The list</p>
+          <h2>We’ll write when there is something to install.</h2>
+          <p class="section-lead">
+            No feed. No drip. A note when the CLI is ready for people who are
+            not us. Open source, Apache-2.0, running locally — that part does
+            not change.
+          </p>
+          <form class="join join-lg" id="join-form" novalidate>
+            <label class="sr-only" for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              spellcheck="false"
+              required
+              placeholder="you@work.com"
+            />
+            <button type="submit">Join the list</button>
+          </form>
+          <p class="join-hint" data-join-status>
+            Opens a draft to hi@nohype.ai with a request to append your address
+            to the olive-mail list.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>
+          <span class="brand-name">olive-mail</span>
+          is a local CLI from
+          <a href="https://nohype.ai">Nohype AI</a>.
+        </p>
+        <p>
+          <a href="mailto:hi@nohype.ai">hi@nohype.ai</a>
+          · Apache-2.0
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
