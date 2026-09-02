@@ -317,7 +317,7 @@ code {
 .hero-logo {
   width: min(240px, 70%);
   height: auto;
-  padding: 12%;
+  padding: 6%;
 }
 
 .term {
