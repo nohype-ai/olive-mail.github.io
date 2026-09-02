@@ -233,7 +233,6 @@ code {
 .brand-mark {
   width: 28px;
   height: 28px;
-  color: var(--olive);
   flex: none;
 }
 
@@ -318,6 +317,7 @@ code {
 .hero-logo {
   width: min(240px, 70%);
   height: auto;
+  padding: 12%;
 }
 
 .term {
