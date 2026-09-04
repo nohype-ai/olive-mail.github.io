@@ -114,13 +114,17 @@ h3 {
   margin: 0;
 }
 
+h1,
+h2 {
+  margin-bottom: var(--space-5);
+}
+
 h1 {
   font-size: var(--text-3xl);
 }
 
 h2 {
   font-size: var(--text-2xl);
-  margin-bottom: var(--space-5);
 }
 
 h3 {
@@ -370,6 +374,7 @@ code {
   flex: 1;
   min-width: 0;
   height: 48px;
+  min-height: 48px;
   border: 1px solid var(--border-strong);
   background: #faf7ef;
   color: var(--fg);
@@ -651,6 +656,7 @@ code {
 
   .join input,
   .join button {
+    flex: none;
     width: 100%;
   }
 }
