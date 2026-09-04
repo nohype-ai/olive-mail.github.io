@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
-
     <header class="site-header">
       <div class="wrap header-inner">
         <a class="brand" href="#top" aria-label="olive-mail home">
@@ -69,22 +67,13 @@
               />
               <button type="submit">Join the list</button>
             </form>
-            <p class="join-hint" data-join-status>
-              Opens a draft to hi@nohype.ai asking us to add your address.
-            </p>
+            <p class="join-hint" data-join-status></p>
           </div>
           <aside class="hero-panel" aria-label="Command preview">
-            <img
-              class="hero-logo"
-              src="assets/logo.svg"
-              width="774"
-              height="840"
-              alt="olive-mail"
-            />
             <div class="term">
               <div class="term-top">
                 <span class="term-dot" aria-hidden="true"></span>
-                <span>local · you authenticated</span>
+                <span>olive-mail</span>
               </div>
               <pre class="term-body"><code><span class="prompt">$</span> olive-mail auth you@work.com
 <span class="ok">authorized. agents never see this password.</span>
@@ -93,7 +82,7 @@
 <span class="dim">42</span>  Alice Chen    Re: Q3 close     2d
 
 <span class="prompt">$</span> olive-mail message read 42
-<span class="dim">headers first. body only if you allow it.</span></code></pre>
+<span class="deny">denied: you can see headers, not the body</span></code></pre>
             </div>
           </aside>
         </div>

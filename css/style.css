@@ -1,13 +1,11 @@
 :root {
   --bg: #f3eee3;
   --bg-elevated: #ebe4d4;
-  --bg-ink: #1c1a14;
   --fg: #1c1a14;
   --fg-muted: #5c5748;
   --fg-subtle: #7a7464;
   --olive: #5c6e24;
   --olive-deep: #3d4a18;
-  --olive-leaf: #778f2f;
   --olive-fg: #f3eee3;
   --border: color-mix(in oklab, var(--fg) 14%, transparent);
   --border-strong: color-mix(in oklab, var(--fg) 22%, transparent);
@@ -160,22 +158,6 @@ code {
   border: 0;
 }
 
-.skip {
-  position: absolute;
-  left: var(--space-4);
-  top: -40px;
-  z-index: 20;
-  background: var(--olive);
-  color: var(--olive-fg);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-sm);
-}
-
-.skip:focus {
-  top: var(--space-4);
-  color: var(--olive-fg);
-}
-
 .wrap {
   width: min(100% - 2 * var(--space-5), var(--wrap));
   margin-inline: auto;
@@ -307,25 +289,15 @@ code {
 }
 
 .hero-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-5);
   min-width: 0;
-}
-
-.hero-logo {
-  width: min(240px, 70%);
-  height: auto;
-  padding: 6%;
 }
 
 .term {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  background: var(--bg-ink);
-  color: #e8e2d2;
+  background: var(--bg-elevated);
+  color: var(--fg);
   border-radius: var(--radius-xl);
   padding: var(--space-4);
   box-shadow: var(--shadow-border);
@@ -337,7 +309,7 @@ code {
   gap: var(--space-2);
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: color-mix(in oklab, #e8e2d2 55%, transparent);
+  color: var(--fg-subtle);
   padding: 4px 8px 12px;
 }
 
@@ -345,20 +317,20 @@ code {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--olive-leaf);
+  background: var(--olive);
 }
 
 .term-body {
   margin: 0;
   padding: var(--space-4);
-  background: #14130f;
+  background: #faf7ef;
   border-radius: var(--radius-md);
   font-family: var(--font-mono);
   font-size: 0.8rem;
   line-height: 1.65;
   overflow-x: auto;
   max-width: 100%;
-  color: #d9d2c0;
+  color: var(--fg);
 }
 
 .term-body code {
@@ -370,15 +342,19 @@ code {
 }
 
 .term-body .prompt {
-  color: var(--olive-leaf);
+  color: var(--olive);
 }
 
 .term-body .ok {
-  color: #b7c77a;
+  color: var(--olive-deep);
 }
 
 .term-body .dim {
-  color: #8a8374;
+  color: var(--fg-subtle);
+}
+
+.term-body .deny {
+  color: #8a3d2b;
 }
 
 /* Join form */
@@ -440,6 +416,11 @@ code {
   margin-top: var(--space-3);
   font-size: var(--text-sm);
   color: var(--fg-subtle);
+}
+
+.join-hint:empty {
+  display: none;
+  margin: 0;
 }
 
 .join-hint.is-error {
@@ -662,10 +643,6 @@ code {
 
   .hero {
     padding-top: var(--space-6);
-  }
-
-  .hero-logo {
-    width: 180px;
   }
 
   .join {
