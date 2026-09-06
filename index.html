@@ -43,7 +43,7 @@
       <section class="hero">
         <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Open-source CLI · Apache-2.0 · local</p>
+            <p class="eyebrow">Open-source · Local · Linux + Mac</p>
             <h1>Email as Agent Context.<br>Controlled, Private, Token-Efficient.</h1>
             <p class="lede">
               Existing mail accounts hold crucial and sensitive context for real work. But typical agents either see none of it or can do all with it – locked into their own little mailbox or holding the keys to your kingdom.
@@ -74,14 +74,15 @@
                 <span class="term-dot" aria-hidden="true"></span>
                 <span>agent-user</span>
               </div>
-              <pre class="term-body"><code><span class="prompt">$</span> olive-mail auth you@work.com
-<span class="ok">authorized. agents never see this password.</span>
+              <pre class="term-body"><code><span class="prompt">$</span> olive-mail account add you@work.com
+…
+<span class="ok">Authorized. Agents never see this password.</span>
 
-<span class="prompt">$</span> olive-mail envelope search from alice after 2026-01-01
+<span class="prompt">$</span> olive-mail email list --mailbox Inbox --from alice
 <span class="dim">42</span>  Alice Chen    Re: Q3 close     2d
 
-<span class="prompt">$</span> olive-mail message read 42
-<span class="deny">denied: you can see headers, not the body</span></code></pre>
+<span class="prompt">$</span> olive-mail email show 42 --mailbox Inbox
+<span class="deny">Denied: You see email meta data, not email content.</span></code></pre>
             </div>
           </aside>
         </div>
