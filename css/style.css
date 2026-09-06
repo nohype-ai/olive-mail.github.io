@@ -4,6 +4,7 @@
   --fg: #1c1a14;
   --fg-muted: #5c5748;
   --fg-subtle: #7a7464;
+  --fg-dim: color-mix(in oklab, var(--fg-subtle) 66%, var(--bg));
   --olive: #5c6e24;
   --olive-deep: #3d4a18;
   --olive-fg: #f3eee3;
@@ -125,7 +126,7 @@ h1 {
 }
 
 .h1-sub {
-  color: var(--fg-subtle);
+  color: var(--fg-dim);
 }
 
 h2 {
@@ -211,10 +212,14 @@ code {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 1px;
   text-decoration: none;
-  color: var(--olive);
+  color: var(--fg-muted);
   min-height: 44px;
+}
+
+.brand:hover {
+  color: var(--fg-muted);
 }
 
 .brand-mark {
@@ -249,7 +254,7 @@ code {
 }
 
 .nav a:hover {
-  color: var(--fg);
+  color: var(--fg-muted);
   background: color-mix(in oklab, var(--olive) 8%, transparent);
 }
 
@@ -269,11 +274,19 @@ code {
   padding: var(--space-8) 0 var(--space-9);
 }
 
+.hero-head {
+  margin-bottom: var(--space-7);
+}
+
+.hero-head h1 {
+  margin-bottom: 0;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
   gap: var(--space-8);
-  align-items: center;
+  align-items: start;
 }
 
 .lede {
@@ -398,20 +411,20 @@ code {
 .join button {
   height: 48px;
   padding: 0 18px;
-  border: 0;
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  background: var(--olive);
-  color: var(--olive-fg);
+  background: var(--bg-elevated);
+  color: var(--fg-muted);
   font: inherit;
   font-weight: 600;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   cursor: pointer;
   white-space: nowrap;
   transition: background var(--motion-quick) var(--ease-out), transform 150ms ease-out;
 }
 
 .join button:hover {
-  background: var(--olive-deep);
+  background: color-mix(in oklab, var(--fg-muted) 12%, var(--bg));
 }
 
 .join button:active {
@@ -593,17 +606,18 @@ code {
 
 /* Motion */
 
+.hero-head > *,
 .hero-copy > *,
 .hero-panel {
   animation: rise var(--motion-slow) var(--ease-out) both;
 }
 
-.hero-copy > *:nth-child(1) { animation-delay: 40ms; }
-.hero-copy > *:nth-child(2) { animation-delay: 80ms; }
-.hero-copy > *:nth-child(3) { animation-delay: 120ms; }
-.hero-copy > *:nth-child(4) { animation-delay: 160ms; }
-.hero-copy > *:nth-child(5) { animation-delay: 200ms; }
-.hero-copy > *:nth-child(6) { animation-delay: 240ms; }
+.hero-head > *:nth-child(1) { animation-delay: 40ms; }
+.hero-head > *:nth-child(2) { animation-delay: 80ms; }
+.hero-copy > *:nth-child(1) { animation-delay: 120ms; }
+.hero-copy > *:nth-child(2) { animation-delay: 160ms; }
+.hero-copy > *:nth-child(3) { animation-delay: 200ms; }
+.hero-copy > *:nth-child(4) { animation-delay: 240ms; }
 .hero-panel { animation-delay: 160ms; }
 
 @keyframes rise {
@@ -624,6 +638,7 @@ code {
     scroll-behavior: auto;
   }
 
+  .hero-head > *,
   .hero-copy > *,
   .hero-panel {
     animation: none;

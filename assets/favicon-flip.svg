@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" height="100%" viewBox="0 0 132 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <g transform="translate(132,0) scale(-1,1)">
+    <path d="M29.167,0l72.917,0c16.108,0 29.167,13.058 29.167,29.167l0,72.917c0,16.108 -13.058,29.167 -29.167,29.167l-72.917,0c-16.108,0 -29.167,-13.058 -29.167,-29.167l0,-72.917c0,-16.108 13.058,-29.167 29.167,-29.167Z" style="fill:#f3eee3;fill-rule:nonzero;"/>
+    <path d="M60.938,18.75c25.887,2.592 48.971,25.675 51.563,51.562c2.588,25.892 -16.3,44.779 -42.188,42.188c-25.892,-2.587 -48.975,-25.671 -51.562,-51.563c-2.592,-25.887 16.296,-44.775 42.188,-42.188Z" style="fill:#606e33;fill-rule:nonzero;"/>
+    <path d="M47.596,28.846c8.413,-1.942 13.658,3.308 11.717,11.721c-1.942,8.413 -10.337,16.808 -18.75,18.75c-8.413,1.942 -13.658,-3.304 -11.717,-11.721c1.942,-8.413 10.333,-16.808 18.75,-18.75Z" style="fill:#f2eee4;fill-rule:nonzero;"/>
+  </g>
+</svg>
