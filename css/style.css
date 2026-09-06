@@ -212,7 +212,7 @@ code {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 1px;
+  gap: 0px;
   text-decoration: none;
   color: var(--fg-muted);
   min-height: 44px;
