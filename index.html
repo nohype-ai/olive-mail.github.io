@@ -81,7 +81,57 @@
         </div>
       </section>
 
-      <section class="band" id="why">
+      <section class="band" id="how">
+        <div class="wrap">
+          <p class="eyebrow">How</p>
+          <h2>Install With One Command</h2>
+          <div
+            class="term term-install"
+            role="button"
+            tabindex="0"
+            aria-label="Copy install command: brew install nohype-ai/tap/olive-mail"
+            data-copy="brew install nohype-ai/tap/olive-mail"
+          >
+            <div class="term-top">
+              <span class="term-dot" aria-hidden="true"></span>
+              <span>agent-user</span>
+              <span class="term-copy-label">Copy</span>
+            </div>
+            <pre class="term-body"><code><span class="prompt">$</span> brew install nohype-ai/tap/olive-mail</code></pre>
+          </div>
+          <ol class="steps">
+              <li>
+                <span class="step-n">3</span>
+                <div>
+                  <h3>Run the above command</h3>
+                  <p>
+                      It will use Homebrew to install <code>olive-mail</code>, either from the prebuilt binary or by building it with Swift.
+                  </p>
+                </div>
+              </li>
+            <li>
+              <span class="step-n">1</span>
+              <div>
+                <h3>Add an email account</h3>
+                <p>
+                  <code>olive-mail account add you@work.com</code> adds the credentials for that email account.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-n">2</span>
+              <div>
+                <h3>Tell your agents</h3>
+                <p>
+                    Point your agents to the <code>olive-mail</code> CLI so they know to use it. An explicit agent skill is also coming.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="plain" id="why">
         <div class="wrap">
           <p class="eyebrow">Why</p>
           <h2>Direct Access, Connectors or Agent Emails Are No Real Solution.</h2>
@@ -118,7 +168,7 @@
         </div>
       </section>
 
-      <section class="plain" id="vision">
+      <section class="band" id="vision">
         <div class="wrap">
           <p class="eyebrow">Vision</p>
           <h2>A Security and Context Gateway – Not Another AI Inbox.</h2>
@@ -163,46 +213,6 @@
               </p>
             </li>
           </ul>
-        </div>
-      </section>
-
-      <section class="band">
-        <div class="wrap">
-          <p class="eyebrow">How it runs</p>
-          <h2>Local. Inspectable. Yours.</h2>
-          <ol class="steps">
-            <li>
-              <span class="step-n">1</span>
-              <div>
-                <h3>Authorize once</h3>
-                <p>
-                  <code>olive-mail auth you@work.com</code> talks IMAP on your
-                  machine. The secret stays in your config, mode 0600.
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="step-n">2</span>
-              <div>
-                <h3>Agents call the CLI</h3>
-                <p>
-                  Search, list, read — the same commands a human would type.
-                  Cron and apps can call it without an LLM in the loop.
-                </p>
-              </div>
-            </li>
-            <li>
-              <span class="step-n">3</span>
-              <div>
-                <h3>You still send</h3>
-                <p>
-                  Sending is gated. Agents may draft if you allow it. The
-                  letterhead stays human.
-                </p>
-              </div>
-            </li>
-          </ol>
-          <p class="platforms">Linux first, then macOS, then Windows.</p>
         </div>
       </section>
 

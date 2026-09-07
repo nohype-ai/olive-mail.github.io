@@ -323,6 +323,10 @@ code {
   box-shadow: var(--shadow-border);
 }
 
+.band .term {
+  background: var(--bg);
+}
+
 .term-top {
   display: flex;
   align-items: center;
@@ -375,6 +379,20 @@ code {
 
 .term-body .deny {
   color: #8a3d2b;
+}
+
+.term-install {
+  max-width: 42rem;
+  margin-bottom: var(--space-7);
+  cursor: pointer;
+}
+
+.term-install .term-copy-label {
+  margin-left: auto;
+}
+
+.term-install.is-copied .term-copy-label {
+  color: var(--olive-deep);
 }
 
 .cta-btn {
@@ -430,6 +448,10 @@ code {
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   box-shadow: var(--shadow-border);
+}
+
+.plain .card {
+  background: var(--bg-elevated);
 }
 
 .card h3 {
