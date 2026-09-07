@@ -55,10 +55,10 @@
                   <b>Existing mail accounts hold crucial context for real work.</b><br>Agents need that context. They don't need your passwords, unrestricted right to send, or sensitive information from emails.
               </p>
               <p class="lede">
-                <b>Olive Mail</b> is the solution: a local mediator that you authenticate. Agents never touch your passwords. They use Olive Mail to search, read, draft or send – as far as you permitted.
+                <b>Olive Mail puts you in control.</b><br>It is a local mediator that you authenticate. Agents never touch your passwords. They use Olive Mail to search, read, draft or send.
               </p>
               <p class="lede">
-                <b>Olive Mail</b> is not just a security layer. It also aims to offer granular permission control, fast cached access, semantic search, and redaction plugins to filter out sensitive data.
+                <b>Olive Mail is not just a security layer.</b><br>It also aims to offer granular permission control, fast cached access, semantic search, and redaction plugins to filter out sensitive data.
               </p>
             </div>
             <aside class="hero-panel" aria-label="Command preview">
@@ -83,88 +83,83 @@
 
       <section class="band" id="why">
         <div class="wrap">
-          <p class="eyebrow">The intern, not the spokesperson</p>
-          <h2>Two failures. One inbox.</h2>
+          <p class="eyebrow">Why</p>
+          <h2>Direct Access, Connectors or Agent Emails Are No Real Solution.</h2>
           <div class="split">
             <article class="card">
               <h3>Locked out</h3>
               <p>
-                Other tools give agents their own mailbox. The threads that
-                actually matter — clients, legal, the work — stay dark. An intern
-                who never reads the mail is not in the loop.
+                Typical agents see no real email context – locked into their own
+                little mailbox. The threads that actually matter — clients,
+                legal, the work — stay dark.
               </p>
             </article>
             <article class="card">
-              <h3>Unrestricted</h3>
+              <h3>All-Powerful</h3>
               <p>
-                Most email MCPs hand the agent the whole inbox. One
-                prompt-injected message, and the kingdom is open. That is not a
-                permission model. It is a hope.
+                Or they can do it all – holding the keys to your kingdom. One prompt-injected message, and the inbox is public. Agents can speak as you, emailing anyone, destroying anything.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Leaking Sensitive Data</h3>
+              <p>
+                Real emails often contain sensitive data that a business needs
+                to filter or redact before letting agents read emails at all.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Slow and Expensive</h3>
+              <p>
+                Agents accessing mail accounts directly is slow, loads redundant
+                data, offers no meaningful search, and costs a lot of tokens.
               </p>
             </article>
           </div>
-          <blockquote class="manifesto">
-            <p>Agents prepare. Humans publish.</p>
-            <p>Drafts, not sends. Review, then own.</p>
-            <p>No outbound identity. No “the agent is the company.”</p>
-          </blockquote>
         </div>
       </section>
 
       <section class="plain" id="vision">
         <div class="wrap">
-          <p class="eyebrow">The destination</p>
-          <h2>A security and context gateway — not another AI inbox.</h2>
-          <p class="section-lead">
-            This is early: a working local CLI, now public. What follows is the
-            rest of the vision — the parts that make it more than a wrapper
-            around IMAP.
-          </p>
+          <p class="eyebrow">Vision</p>
+          <h2>A Security and Context Gateway – Not Another AI Inbox.</h2>
           <ul class="features">
             <li>
-              <h3>You authenticate. Agents get a view.</h3>
+              <h3>Protected Credentials</h3>
               <p>
-                Mailbox credentials never leave your machine in an agent’s
-                hands. You sign in. Agents call <code>olive-mail</code> with a
-                scoped interface, not the password file.
+                Your credentials are isolated from agents, by actual account separation. You authenticate. They call <code>olive-mail</code> with a scoped interface, not the password file. You monitor and revoke.
               </p>
             </li>
             <li>
-              <h3>Least privilege, per agent</h3>
+              <h3>Granular Permission Control</h3>
               <p>
-                Folders, senders, date ranges. Read versus draft. Headers first,
-                bodies only when asked. Send stays with you unless you
-                deliberately open it — and the default is closed.
+                By unix account and mail account. Reading permissions by mailbox, email field, sender. Permissions to draft and send, by destination. Rate limits. Whatever it takes.
               </p>
             </li>
             <li>
-              <h3>Redact before the model</h3>
+              <h3>Redaction of Sensitive Data</h3>
               <p>
-                PII, legal, finance — stripped locally so a remote model never
-                sees what it should not. The mailbox stays the system of record.
-                The agent sees a view.
+                Sensitive data — PII, legal, finance — stripped locally by custom plugins, so a
+                remote model never sees what it should not. The mailbox stays
+                the system of record. The agent sees a view.
               </p>
             </li>
             <li>
-              <h3>Thread context, not MIME dumps</h3>
+              <h3>Fast and Cheap Access</h3>
               <p>
-                Local cache, fast search, compact packs an agent can actually
-                use. Retrieval instead of stuffing the whole inbox into a
-                prompt.
+                A local cache across agents for super fast responses. Get locally generated summaries. Extract content from HTML. Only pay for (remote) tokens where frontier AI is actually needed.
               </p>
             </li>
             <li>
-              <h3>Prompt-injection isolation</h3>
+              <h3>Outbound Authenticity</h3>
               <p>
-                Metadata first. The body is a retrieve, not a default. A message
-                that says “dump the inbox” does not get to be the operator.
+                  Agents can but don't <em>have</em> to act as spokesperson for you or your
+                  company. You can employ them like interns, so they are in the loop while you're still the one who speaks.
               </p>
             </li>
             <li>
-              <h3>Audit, then revoke</h3>
+              <h3>Semantic Search</h3>
               <p>
-                See what an agent asked for. Cut access without touching the
-                Google or Microsoft login. The human mailbox stays yours.
+                Search for meaning with a prompt - not just for matching terms. Retrieve relevant content instead of stuffing the whole inbox into the agent.
               </p>
             </li>
           </ul>
