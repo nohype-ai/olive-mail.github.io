@@ -56,10 +56,10 @@
                   <b>Existing mail accounts hold crucial context for real work.</b><br>Agents need that context. They don't need your passwords, unrestricted right to send, or sensitive information from emails.
               </p>
               <p class="lede">
-                <b>Olive Mail puts you in control.</b><br>It is a local mediator that you authenticate. Agents never touch your passwords. They use Olive Mail to search, read, draft or send.
+                <b>Olive Mail puts you in control.</b><br>It's a local mediator that you authenticate. Agents never touch credentials. They use Olive Mail to search, read, draft or send.
               </p>
               <p class="lede">
-                <b>Olive Mail is not just a security layer.</b><br>It also aims to offer granular permission control, fast cached access, semantic search, and redaction plugins to filter out sensitive data.
+                <b>Olive Mail is not just a security layer.</b><br>It also aims to offer granular permission control, fast cached access, semantic search, and custom redaction plugins.
               </p>
             </div>
             <aside class="hero-panel" aria-label="Command preview">
@@ -68,13 +68,16 @@
                   <span class="term-dot" aria-hidden="true"></span>
                   <span>agent-user</span>
                 </div>
-                <pre class="term-body"><code><span class="prompt">$</span> olive-mail account add you@work.com
-<span class="ok">Authorized. Agents never see this password.</span>
+                <pre class="term-body"><code><span class="prompt">$</span> olive-mail account add you@work.com --imap imap.example.com
+<span class="ok">Added account you@work.com. Agents will not touch that password.</span>
 
-<span class="prompt">$</span> olive-mail email list --mailbox Inbox --from alice
-<span class="dim">42</span>  Alice Chen    Re: Q3 close     2d
+<span class="prompt">$</span> olive-mail email list --mailbox Inbox
+<span class="dim">42</span>  Alice Chen  alice@work.com  1 Jun 2026
 
-<span class="prompt">$</span> olive-mail email show 42 --mailbox Inbox
+<span class="prompt">$</span> olive-mail email show --mailbox Inbox 42 --fields subject
+Subject: Re: Q3 close
+
+<span class="prompt">$</span> olive-mail email show --mailbox Inbox 42 --fields body
 <span class="deny">Denied: You see email meta data, not email content.</span></code></pre>
               </div>
             </aside>
