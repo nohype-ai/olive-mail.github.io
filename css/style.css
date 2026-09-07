@@ -131,6 +131,7 @@ h1 {
 
 h2 {
   font-size: var(--text-2xl);
+  text-align: center;
 }
 
 h3 {
@@ -181,6 +182,7 @@ code {
   text-transform: uppercase;
   color: var(--olive);
   margin: 0 0 var(--space-4);
+  text-align: center;
 }
 
 .section-lead {
@@ -282,6 +284,7 @@ code {
 
 .hero-head {
   margin-bottom: var(--space-7);
+  text-align: center;
 }
 
 .hero-head h1 {
@@ -383,6 +386,7 @@ code {
 
 .term-install {
   max-width: 42rem;
+  margin-inline: auto;
   margin-bottom: var(--space-7);
   cursor: pointer;
 }
@@ -486,6 +490,7 @@ code {
   margin: 0;
   padding: 0;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-5);
 }
 
@@ -604,7 +609,8 @@ code {
 @media (max-width: 860px) {
   .hero-grid,
   .split,
-  .features {
+  .features,
+  .steps {
     grid-template-columns: 1fr;
   }
 
