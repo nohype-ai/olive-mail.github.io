@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280" />
+    <title>Olive Mail — social card</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      html,
+      body {
+        width: 1280px;
+        height: 640px;
+        overflow: hidden;
+      }
+
+      .social-card {
+        width: 1280px;
+        height: 640px;
+        padding: 80px 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.35em;
+        font-size: var(--text-3xl);
+      }
+
+      .social-card .brand {
+        min-height: 0;
+        gap: 0.2em;
+        pointer-events: none;
+        font-size: 1em;
+        color: var(--fg-muted);
+      }
+
+      .social-card .brand-mark {
+        width: auto;
+        height: 1em;
+        max-width: none;
+      }
+
+      .social-card .brand-name {
+        font-size: 1em;
+        letter-spacing: var(--tracking-display);
+        line-height: var(--leading-tight);
+      }
+
+      .social-card h1 {
+        margin-bottom: 0;
+        font-size: 1em;
+      }
+
+      .social-domain {
+        font-family: var(--font-display);
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: var(--tracking-display);
+        line-height: var(--leading-tight);
+        color: var(--olive);
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="social-card">
+      <a class="brand" href="#" aria-label="Olive Mail">
+        <img
+          class="brand-mark"
+          src="assets/logo_pure.svg"
+          width="28"
+          height="32"
+          alt=""
+        />
+        <span class="brand-name">Olive Mail</span>
+      </a>
+      <h1>
+        Email as Context for Agents.<br />
+        <span class="h1-sub">Controlled, Private, Token-Efficient</span>
+      </h1>
+      <p class="social-domain">olivemail.ai</p>
+    </div>
+  </body>
+</html>
