@@ -5,6 +5,11 @@
   if (brand) {
     brand.addEventListener("click", function (event) {
       event.preventDefault();
+      if (history.pushState) {
+        history.pushState(null, "", "#home");
+      } else {
+        location.hash = "home";
+      }
       var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
     });

@@ -198,6 +198,14 @@ code {
   margin-bottom: var(--space-7);
 }
 
+.home-anchor {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Header */
 
 .site-header {
