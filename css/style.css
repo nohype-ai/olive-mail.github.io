@@ -295,10 +295,6 @@ code {
   max-width: 38rem;
 }
 
-.lede-second {
-  margin-bottom: var(--space-6);
-}
-
 .lede em {
   font-family: var(--font-display);
   font-style: italic;
@@ -375,88 +371,32 @@ code {
   color: #8a3d2b;
 }
 
-/* Join form */
-
-.join {
-  display: flex;
-  gap: var(--space-2);
-  align-items: stretch;
-  max-width: 34rem;
-}
-
-.join input {
-  flex: 1;
-  min-width: 0;
-  height: 48px;
-  min-height: 48px;
-  border: 1px solid var(--border-strong);
-  background: #faf7ef;
-  color: var(--fg);
-  border-radius: var(--radius-md);
-  padding: 0 14px;
-  font: inherit;
-  font-size: var(--text-sm);
-}
-
-.join input::placeholder {
-  color: var(--fg-subtle);
-}
-
-.join input:focus {
-  outline: none;
-  border-color: var(--olive);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--olive) 25%, transparent);
-}
-
-.join button {
-  height: 48px;
-  padding: 0 18px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--bg-elevated);
-  color: var(--fg-muted);
-  font: inherit;
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: var(--olive);
+  color: var(--olive-fg);
   font-weight: 600;
   font-size: var(--text-base);
-  cursor: pointer;
+  text-decoration: none;
   white-space: nowrap;
-  transition: background var(--motion-quick) var(--ease-out), transform 150ms ease-out;
+  transition:
+    background var(--motion-quick) var(--ease-out),
+    color var(--motion-quick) var(--ease-out),
+    transform 150ms ease-out;
 }
 
-.join button:hover {
-  background: color-mix(in oklab, var(--fg-muted) 12%, var(--bg));
+.cta-btn:hover {
+  background: var(--olive-deep);
+  color: var(--olive-fg);
 }
 
-.join button:active {
+.cta-btn:active {
   transform: scale(0.96);
-}
-
-.join-hint {
-  margin-top: var(--space-3);
-  font-size: var(--text-sm);
-  color: var(--fg-subtle);
-}
-
-.join-hint:empty {
-  display: none;
-  margin: 0;
-}
-
-.join-hint.is-error {
-  color: #8a3d2b;
-}
-
-.join-hint.is-ok {
-  color: var(--olive-deep);
-}
-
-.join-lg {
-  max-width: 38rem;
-}
-
-.join-lg input,
-.join-lg button {
-  height: 52px;
 }
 
 /* Bands */
@@ -574,10 +514,13 @@ code {
 
 .cta-inner {
   max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .cta-block h2 {
   max-width: 18ch;
+  margin-inline: auto;
 }
 
 /* Footer */
@@ -644,7 +587,7 @@ code {
     animation: none;
   }
 
-  .join button:active {
+  .cta-btn:active {
     transform: none;
   }
 }
@@ -664,16 +607,6 @@ code {
 
   .hero {
     padding-top: var(--space-6);
-  }
-
-  .join {
-    flex-direction: column;
-  }
-
-  .join input,
-  .join button {
-    flex: none;
-    width: 100%;
   }
 }
 
