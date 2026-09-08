@@ -189,12 +189,14 @@ code {
   max-width: 42rem;
   color: var(--fg-muted);
   font-size: var(--text-lg);
+  margin-inline: auto;
   margin-bottom: var(--space-4);
 }
 
 .section-body {
-  max-width: 42rem;
+  max-width: 48rem;
   color: var(--fg-muted);
+  margin-inline: auto;
   margin-bottom: var(--space-7);
 }
 
