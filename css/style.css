@@ -194,7 +194,8 @@ code {
 }
 
 .section-body {
-  max-width: 48rem;
+  text-align: center;
+  max-width: 42rem;
   color: var(--fg-muted);
   margin-inline: auto;
   margin-bottom: var(--space-7);
