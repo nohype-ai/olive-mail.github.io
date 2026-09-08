@@ -403,12 +403,50 @@ code {
   cursor: pointer;
 }
 
-.term-install .term-copy-label {
-  margin-left: auto;
+.term-install .term-body {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
+.term-install .term-body pre {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.term-install .term-copy-label {
+  flex: none;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--olive);
+  color: var(--olive-fg);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition:
+    background var(--motion-quick) var(--ease-out),
+    transform 150ms ease-out;
+}
+
+.term-install:hover .term-copy-label,
+.term-install:focus-visible .term-copy-label,
 .term-install.is-copied .term-copy-label {
-  color: var(--olive-deep);
+  background: var(--olive-deep);
+  color: var(--olive-fg);
+}
+
+.term-install:active .term-copy-label {
+  transform: scale(0.96);
 }
 
 .cta-btn {
@@ -523,8 +561,8 @@ code {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--olive-fg);
-  background: var(--olive);
+  color: var(--fg-muted);
+  background: var(--bg);
 }
 
 .steps p {

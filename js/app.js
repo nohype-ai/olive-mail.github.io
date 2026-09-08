@@ -26,7 +26,7 @@
       install.classList.add("is-copied");
       clearTimeout(copiedTimer);
       copiedTimer = setTimeout(function () {
-        label.textContent = "Copy";
+        label.textContent = "↓ Copy";
         install.classList.remove("is-copied");
       }, 1600);
     }
